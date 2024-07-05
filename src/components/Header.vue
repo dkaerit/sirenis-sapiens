@@ -29,7 +29,7 @@ const formattedTitle = computed(() => {
        <div class="flex justify-center ">
        <span class="subtitle line-bg-blur max-w-[510px] ">
          Estudio imaginativo de filogenética,
-         taxonomía y morfología que busca inventar una configuración sostenible de la
+         taxonomía y morfología sobre la
          biología de las sirenas.
        </span>
       </div>
