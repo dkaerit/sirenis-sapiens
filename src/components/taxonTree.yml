@@ -1,0 +1,310 @@
+nombre: Animal
+trait: nohover
+color: &kingdom "#000000"  #"#db7976" 
+current: reino
+children: filo
+filo:
+  nombre: Cordados
+  trait: nohover
+  color: &filo "#000000" #"#9ac9db"
+  current: filo
+  children: subfilo
+  subfilo:
+    nombre: Vertebrados
+    trait: nohover
+    color: *filo
+    current: subfilo
+    children: infrafilo
+    infrafilo:
+      nombre: Gnatóstomos
+      trait: nohover
+      color: *filo
+      current: infrafilo
+      children: superclase
+      superclase:
+
+        - nombre: Tetrápodos
+          trait: nohover
+          color: &clase "#000000" #"#99ccff"
+          current: superclase
+          children: clase
+          clase:
+            - nombre: Anfibios
+              color: *clase
+              current: clase
+              children: subclase
+              subclase:
+                - nombre: Lisanfibios
+                  color: *clase
+                  current: subclase
+                  children: infraclase
+                  infraclase:
+                    nombre: "???"
+                    children: orden
+                    orden:
+                      - nombre: Caudados
+                        color: &orden "#000000" #"#908cbb"
+                        current: orden
+                        children: suborden
+                        suborden:
+                          nombre: Urodela
+                          color: *orden
+                          current: suborden
+                          children: familia
+                          familia:
+                            nombre: Sirénidos
+                            color: &familia "#000000" #"#d5ada7"
+                            current: familia
+                            children: género
+                            género:
+                              nombre: Siren
+                              current: género
+                              color: &genero "#000000" #"#ddbc92"
+
+            - nombre: Dífidos
+              trait: nohover
+              color: *clase
+              current: clase
+              children: subclase
+              subclase:
+                - nombre: Ictioterios
+                  trait: nohover
+                  color: *clase
+                  current: subclase
+                  children: infraclase
+                  infraclase:
+                    nombre: Ovoplacentarios
+                    trait: nohover
+                    color: *clase
+                    current: infraclase
+                    children: orden
+                    orden:
+                      - nombre: Ictiántropos
+                        trait: nohover
+                        color: *orden
+                        current: orden
+                        children: suborden
+                        suborden:
+                          nombre: Kalistósforos
+                          trait: nohover
+                          color: *orden
+                          current: suborden
+                          children: familia
+                          familia:
+                            nombre: Sirenotéridos
+                            trait: nohover
+                            color: *familia
+                            current: familia
+                            children: género
+                            género:
+                              nombre: Sirenis
+                              current: género
+                              trait: nohover
+                              color: *genero
+
+            - nombre: Mamíferos
+              color: *clase
+              current: clase
+              children: subclase
+              subclase:
+                - nombre: Prototerios
+                  color: *clase
+                  current: subclase
+                  children: infraclase
+                  infraclase:
+                    nombre: Australosfénidos
+                    color: *clase
+                    current: infraclase
+                    children: orden
+                    orden:
+                      - nombre: Monotremas
+                        color: *orden
+                        current: orden
+                        children: suborden
+                        suborden:
+                          nombre: Platípodos
+                          color: *orden
+                          current: suborden
+                          children: familia
+                          familia:
+                            nombre: Ornitorrínquidos
+                            color: *familia
+                            current: familia
+                            children: género
+                            género:
+                              nombre: Ornithorhynchus
+                              current: género
+                              color: *genero
+
+                - nombre: Euterios
+                  color: *clase
+                  current: subclase
+                  children: infraclase
+                  infraclase:
+                    nombre: Placentarios
+                    color: *clase
+                    current: infraclase
+                    children: orden
+                    orden:
+                      - nombre: Cetartiodactyla
+                        color: *orden
+                        current: orden
+                        children: suborden
+                        suborden:
+                          nombre: Whippomorfos
+                          color: *orden
+                          current: suborden
+                          children: familia
+                          familia:
+                            nombre: Delfines
+                            color: *familia
+                            current: familia
+                            children: género
+                            género:
+                              nombre: Delphinus
+                              current: género
+                              color: *genero
+
+                      - nombre: Sirenios (Sirenia)
+                        color: *orden
+                        current: Orden
+                        children: familia
+                        familia:
+                          nombre: Dugónguidos
+                          color: *familia
+                          current: familia
+                          children: suborden
+                          suborden:
+                            nombre: "???"
+                            children: género
+                            género:
+                              nombre: Dugongo
+                              current: género
+                              color: *genero
+
+                      - nombre: Primates
+                        color: *orden
+                        current: orden
+                        children: suborden
+                        suborden:
+                          nombre: Haplorrinos
+                          color: *orden
+                          current: suborden
+                          children: familia
+                          familia:
+                            nombre: Homínidos
+                            color: *familia
+                            current: familia
+                            children: género
+                            género:
+                              nombre: Homo (Humano)
+                              current: género
+                              color: *genero
+
+        - nombre: Osteictios
+          color: *clase
+          current: superclase
+          children: clase
+          clase:
+            - nombre: Sarcopterigios
+              color: *clase
+              current: superclase
+              children: subclase
+              subclase:
+                - nombre: 'Peces pulmonados'
+                  color: *clase
+                  current: subclase
+                  children: infraclase
+                  infraclase:
+                    nombre: "???"
+                    children: orden
+                    orden:
+                      - nombre: Lepidosireniformes
+                        color: *orden
+                        current: orden
+                        children: suborden
+                        suborden:
+                          nombre: "???"
+                          children: familia
+                          familia:
+                            nombre: Lepidosirénidos
+                            color: *familia
+                            current: familia
+                            children: género
+                            género:
+                              nombre: Lepidosiren
+                              current: género
+                              color: *genero
+
+            - nombre: Actinopterigios
+              color: *clase
+              current: clase
+              children: subclase
+              subclase:
+                - nombre: Neoptergios
+                  color: *clase
+                  current: subclase
+                  children: infraclase
+                  infraclase:
+                    nombre: Teleósteos
+                    color: *clase
+                    current: infraclase
+                    children: orden
+                    orden:
+                      - nombre: Anguilliformes
+                        color: *orden
+                        current: orden
+                        children: suborden
+                        suborden:
+                          nombre: Anguilloidei
+                          color: *orden
+                          current: suborden
+                          children: familia
+                          familia:
+                            nombre: Anguílidos
+                            color: *familia
+                            current: familia
+                            children: género
+                            género:
+                              nombre: Anguilla
+                              current: género
+                              color: *genero
+
+        - nombre: '???'
+          color: *clase
+          current: superclase
+          children: clase
+          clase:
+            - nombre: Condrictios
+              color: *clase
+              current: clase
+              children: subclase
+              subclase:
+                - nombre: Elasmobranquios
+                  color: *clase
+                  current: subclase
+                  children: superorden
+                  superorden:
+                    nombre: Escualos
+                    color: *orden
+                    current: superorden
+                    children: orden
+                    orden:
+                      - nombre: Carcarriniformes
+                        color: *orden
+                        current: orden
+                        children: suborden
+                        suborden:
+                          nombre: "???"
+                          color: *orden
+                          current: suborden
+                          children: familia
+                          familia:
+                            nombre: Carcarrínidos
+                            color: *familia
+                            current: familia
+                            children: género
+                            género:
+                              nombre: Carcharrínus
+                              color: *genero
+                              current: género
