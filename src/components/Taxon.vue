@@ -33,6 +33,7 @@ const props = defineProps({
          <template v-for="(taxon) of node">
            <div class="item 
            max-w-[calc(100vw-215px)] 
+           min-w-[167px]
            min-[1150px]:max-w-[calc(100vw-415px)] 
            min-[1384px]:max-w-[calc(100vw-795px)]
            min-[1766px]:max-w-[calc(100vw-1180px)]">
