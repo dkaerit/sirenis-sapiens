@@ -21,7 +21,7 @@ import Wrapper from "./layouts/Wrapper.vue";
 import Header from "./components/Header.vue";
 import Taxon from "./components/Taxon.vue";
 
-import Main from "./docs/main.md";
+import Main from "@/docs/main.md";
 import Evolution from "./docs/evolution.md";
 
 import taxonTree from "./components/taxonTree.yml";

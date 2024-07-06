@@ -1,4 +1,5 @@
 <script setup lang="ts">
+// @ts-ignore
 import ReproductiveSystemDoc from "../docs/reproductive-system.md";
 </script>
 

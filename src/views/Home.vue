@@ -1,8 +1,11 @@
 <script setup lang="ts">
 import Taxon from "../components/Taxon.vue";
 
+// @ts-ignore
 import Main from "../docs/main.md";
+// @ts-ignore
 import Evolution from "../docs/evolution.md";
+
 import taxonTree from "../components/taxonTree.yml";
 </script>
 
@@ -18,7 +21,7 @@ import taxonTree from "../components/taxonTree.yml";
     <div class="item flex min-w-max gap-1">
       <div>
         <Taxon :node="taxonTree" />
-        
+
       </div>
     </div>
   </div>
