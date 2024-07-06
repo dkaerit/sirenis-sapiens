@@ -18,6 +18,7 @@ import taxonTree from "../components/taxonTree.yml";
     <div class="item flex min-w-max gap-1">
       <div>
         <Taxon :node="taxonTree" />
+        
       </div>
     </div>
   </div>
