@@ -6,6 +6,11 @@ const sidebarState = ref<"open" | "closed">("closed");
 const toggleSidebar = () => {
   sidebarState.value = sidebarState.value === "closed" ? "open" : "closed";
 };
+
+const menuItems = ref([
+  { id: 1, label: "Inicio", route: "/" },
+  { id: 1, label: "Sistema reproductor", route: "/reproductive-system" },
+]);
 </script>
 
 <template>
@@ -21,7 +26,7 @@ const toggleSidebar = () => {
             data-drawer-toggle="logo-sidebar"
             aria-controls="logo-sidebar"
             type="button"
-            class="flex-none items-center p-2 text-sm rounded-lg sm:hidden hover:bg-opacity-60 hover:bg-black focus:outline-none focus:ring-2 focus:ring-gray-800"
+            class="flex-none items-center p-2 text-sm rounded-lg hover:bg-opacity-60 hover:bg-black focus:outline-none focus:ring-2 focus:ring-gray-800"
           >
             <span class="sr-only">Open sidebar</span>
             <svg
@@ -114,13 +119,11 @@ const toggleSidebar = () => {
     </button>
     <div class="h-full px-3 pb-4 overflow-y-auto bg-white dark:bg-gray-800">
       <ul class="space-y-2 font-medium">
-        <li><span class="ms-3">Dashboard</span></li>
-        <li><span class="flex-1 ms-3 whitespace-nowrap">Kanban</span></li>
-        <li><span class="flex-1 ms-3 whitespace-nowrap">Inbox</span></li>
-        <li><span class="flex-1 ms-3 whitespace-nowrap">Users</span></li>
-        <li><span class="flex-1 ms-3 whitespace-nowrap">Products</span></li>
-        <li><span class="flex-1 ms-3 whitespace-nowrap">Sign In</span></li>
-        <li><span class="flex-1 ms-3 whitespace-nowrap">Sign Up</span></li>
+        <li v-for="item in menuItems" :key="item.id">
+          <RouterLink :to="item.route">
+            <span class="ms-3">{{ item.label }}</span>
+          </RouterLink>
+        </li>
       </ul>
     </div>
   </aside>

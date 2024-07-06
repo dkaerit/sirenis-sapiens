@@ -18,7 +18,8 @@
     "tailwind-merge": "^2.3.0",
     "tailwindcss-animate": "^1.0.7",
     "unplugin-vue-markdown": "^0.26.2",
-    "vue": "^3.4.29"
+    "vue": "^3.4.29",
+    "vue-router": "^4.4.0"
   },
   "devDependencies": {
     "@modyfi/vite-plugin-yaml": "^1.1.0",

@@ -86,12 +86,12 @@ const handleMouseLeave = () => {
   <div class="mx-[3px]" 
   @mouseover="handleMouseOver"
   @mouseleave="handleMouseLeave">
-   <div class="inline-block taxon-cell w-full border rounded-lg h-fit overflow-hidden min-w-[155px] transition duration-200" 
+   <div class="inline-block taxon-cell w-full border rounded-lg h-fit overflow-hidden min-w-[115px] transition duration-200" 
    :style="{ borderColor: borderColor }">
-     <div class="p-0.5 text-center text-base capitalize transition duration-200" :style="{ backgroundColor: bgColor, color: titleColor }">
+     <div class="text-[0.85rem] p-0.5 text-center capitalize transition duration-200" :style="{ backgroundColor: bgColor, color: titleColor }">
        {{ title }}
      </div>
-     <div class="p-0.5 text-center text-base" :style="{ color: textColor }">
+     <div class="text-[0.85rem] p-0.5 text-center" :style="{ color: textColor }">
        {{ text }}
      </div>
    </div>

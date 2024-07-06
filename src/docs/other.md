@@ -7,3 +7,10 @@ el colágeno y elastina
 Glicerina: La glicerina es un líquido viscoso y transparente con propiedades aislantes superiores a la grasa. Se utiliza en diversas aplicaciones, como la fabricación de anticongelantes y cosméticos.
 
 Fluidos supercríticos: Estos fluidos, como el CO2 supercrítico, tienen propiedades de aislamiento térmico únicas y podrían ser utilizados por las sirenas en un sistema circulatorio especializado
+
+segmentación holoblastica=total
+- igual -> humana -> oligolecitos-{isolecito/homolecito}
+- desigual(bilateral) -> anfibios -> {mesolecitos, anisolecitos/heterolecitos->telolecitos}
+
+segmentación meroblastica=parcial -> polilecíticos -> {anisolecitos/heterolecitos->telolecitos}
+- discoidal -> tiburones, pulpos 

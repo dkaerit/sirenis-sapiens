@@ -1,3 +1,17 @@
+<template>
+  <ToggleNavbar>
+    <template #content>
+      <Wrapper #content>
+        <Header title="sirenis sapiens" />
+        <div class="m-[40px]">
+          <router-view />
+        </div>
+      </Wrapper>
+    </template>
+  </ToggleNavbar>
+</template>
+
+
 <script setup>
 import { ref, onMounted, onUnmounted } from 'vue';
 
@@ -117,34 +131,6 @@ onUnmounted(() => {
 });
 </script>
 
-<template>
-  <ToggleNavbar>
-    <template #content>
-      <Wrapper #content>
-        <Header title="sirenis sapiens" />
-        <div class="m-[40px]">
-          <h1>Capítulo 1: Introducción .</h1>
-          <div class="md:columns-2 columns-1">
-            <Main class="first" />
-            <Evolution />
-
-          </div>
-          <br/>
-
-          <div class="max-w-[calc(100vw-70px)] scroll-container" ref="scrollableDiv">
-            <div class="item flex min-w-max gap-1">
-              <div>
-                <Taxon :node="taxonTree"/>
-              </div>
-            </div>
-          </div>
-
-
-        </div>
-      </Wrapper>
-    </template>
-  </ToggleNavbar>
-</template>
 
 <style lang="scss">
 @font-face {
@@ -328,5 +314,9 @@ h1 {
   p, ul, li {
     break-inside: avoid-column; /* Evitar que se divida dentro de un elemento */
   }
+}
+
+.shape-outside {
+  
 }
 </style>

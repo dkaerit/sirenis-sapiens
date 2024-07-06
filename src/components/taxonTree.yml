@@ -168,14 +168,14 @@ filo:
                       - nombre: Sirenios (Sirenia)
                         color: *orden
                         current: Orden
-                        children: familia
-                        familia:
-                          nombre: Dugónguidos
-                          color: *familia
-                          current: familia
-                          children: suborden
-                          suborden:
-                            nombre: "???"
+                        children: suborden
+                        suborden:
+                          nombre: "???"
+                          children: familia
+                          familia:
+                            nombre: Dugónguidos
+                            color: *familia
+                            current: familia
                             children: género
                             género:
                               nombre: Dugongo

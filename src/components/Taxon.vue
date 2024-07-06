@@ -33,7 +33,7 @@ const props = defineProps({
          <template v-for="(taxon) of node">
            <div class="item 
            max-w-[calc(100vw-215px)] 
-           min-w-[167px]
+           min-w-[127px]
            min-[1150px]:max-w-[calc(100vw-415px)] 
            min-[1384px]:max-w-[calc(100vw-795px)]
            min-[1766px]:max-w-[calc(100vw-1180px)]">
@@ -45,7 +45,7 @@ const props = defineProps({
      <template v-else-if="isJsonObject(node)">
          <TaxonCell v-if="node.nombre != '???' && !node.trait" :color="node.color" :title="node.current" :text="node.nombre" :hover="'#808080'"/> 
          <TaxonCell v-else-if="node.nombre != '???'" :color="node.color" :title="node.current" :text="node.nombre"/> 
-         <div v-else class="h-[58px] w-[155px] m-[3px]"/>
+         <div v-else class="h-[58px] w-[115px] m-[3px]"/>
          <Taxon v-if="node[node.children]" :node="node[node.children]" :index="index+1"/>
      </template>
    </template>
