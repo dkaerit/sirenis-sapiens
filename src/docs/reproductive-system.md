@@ -1,8 +1,10 @@
 <img class="imgdoc float-right" width="60%" src="../assets/imgs/anatomy-1.png"/>
 
-Al igual que en la mayoría de las especies, las sirenas y sirenos presentan una serie de diferencias en aparato reproductor, según el sexo. Mientras que las sirenas son monosexuales, equipadas únicamente con órganos reproductores femeninos, los sirenos poseen hermafroditismo simultáneo desde el nacimiento hasta la vida adulta, poseyendo órganos reproductores funcionales de ambos sexos en todo momento. 
+Al igual que en la mayoría de las especies, las sirenas y sirenos presentan una serie de diferencias en aparato reproductor, según el sexo. 
 
-A diferencia de otras especies como el sargo y la anguila, que pueden cambiar de sexo durante su vida, los sirenos mantienen sus órganos masculinos y femeninos sin alteraciones a lo largo de ésta. Sin embargo, aunque tienen ambos tipos de órganos reproductores, no tienen la capacidad de autofecundarse.
+Mientras que las sirenas son monosexuales, equipadas únicamente con órganos reproductores femeninos, los sirenos poseen hermafroditismo simultáneo desde el nacimiento hasta la vida adulta, poseyendo órganos reproductores funcionales de ambos sexos en todo momento. 
+
+Esto difiere de otras especies como el sargo y la anguila, que pueden cambiar de sexo durante su vida. Sin embargo, aunque los sirenos masculonos tienen ambos tipos de órganos reproductores, no tienen la capacidad de autofecundarse.
 
 El sistema reproductor externo de la especie presenta marcadas diferencias entre sirenos y sirenas, reflejando adaptaciones específicas a sus roles reproductivos. Ambos géneros presentan una estructura vulvar que facilita el acceso al cuello uterino.
 
