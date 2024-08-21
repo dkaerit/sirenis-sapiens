@@ -13,7 +13,7 @@ import { Button } from "@/components/ui/button";
 // Crear una referencia para almacenar si el usuario es mayor de edad
 const isAdult = ref(false);
 const isDialogOpen = ref(false);
-const images = ref<Array<Array<{ src: string; author: string }>>>([[]]);
+const images = ref<Array<Array<{ src: string; author: string; url?: string }>>>([[]]);
 
 async function loadImages() {
   images.value = [
@@ -30,7 +30,7 @@ async function loadImages() {
       { "src": (await import('../assets/imgs/gallery/sketch-2.png')).default, "author": "@humanoids_091" },
       { "src": (await import('../assets/imgs/gallery/sketch-7.png')).default, "author": "@humanoids_091" },
       { "src": (await import('../assets/imgs/gallery/sketch-6.png')).default, "author": "@humanoids_091" },
-      { "src": (await import('../assets/imgs/gallery/scene.jpg')).default, "author": "???" },
+      { "src": (await import('../assets/imgs/gallery/scene.jpg')).default, "author": "glochan10 (tumblr)", "url": "https://glochan10.tumblr.com/post/97110664607/quick-doodle-for-my-mermaid-au-wait-im" },
     ],
     [
       { "src": (await import('../assets/imgs/gallery/egg-laying-1.png')).default, "author": "sketch: @humanoids_091,  final: @anidiotfish" },
@@ -88,7 +88,8 @@ onMounted(async () => {
     removeBlurredClass(); // Asegúrate de eliminar el desenfoque si es adulto
   }
 
-  await nextTick(); // Esperar a que el DOM se actualice
+  await nextTick(); // Esperar a que el DOM se actualic
+  if(!isAdult.value) openDialog();
 
   // Seleccionar todas las imágenes con la clase "blurred"
   const blurredImages = document.querySelectorAll("img.blurred");
@@ -110,7 +111,18 @@ onMounted(async () => {
          <div v-for="(group, index) in images" :key="index" class="grid gap-4">
             <div v-for="(image, imgIndex) in group" :key="imgIndex" class="image-item">
                <div class="gallery-image overflow-hidden"><img :class="['h-auto max-w-full blurred', { 'rounded-lg': false }]" :src="image.src" alt="Gallery Image"></div>
-               <center><span class="relative z-10 bg-white px-[10px] text-[0.85em] bottom-[2px]">{{ image.author }}</span></center>
+               <center>
+
+                <span v-if="image.url" class="relative z-10 bg-white px-[10px] text-[0.85em] bottom-[2px]">
+                  
+                  <a :href="image.url">
+                    {{ image.author }}
+                  </a>
+
+                </span>
+                <span v-else class="relative z-10 bg-white px-[10px] text-[0.85em] bottom-[2px]">{{ image.author }}</span>
+
+              </center>
             </div>
         </div>
     </div>
