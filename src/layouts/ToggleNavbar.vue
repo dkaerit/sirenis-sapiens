@@ -9,7 +9,8 @@ const toggleSidebar = () => {
 
 const menuItems = ref([
   { id: 1, label: "Inicio", route: "/" },
-  { id: 1, label: "Sistema reproductor", route: "/reproductive-system" },
+  { id: 2, label: "Sistema reproductor", route: "/reproductive-system" },
+  { id: 3, label: "Galería", route: "/gallery" },
 ]);
 </script>
 

@@ -11,5 +11,9 @@ export default createRouter({
          path: '/reproductive-system',
          component: () => import('../views/ReproductiveSystem.vue'),
        },
+       {
+         path: '/gallery',
+         component: () => import('../views/Gallery.vue'),
+       },
    ]
 });

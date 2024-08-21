@@ -35,26 +35,51 @@ Los testículos de los sirenos son internos, cilíndricos y ovalados, ubicados e
 
 El cuello uterino conecta la vagina con el útero, el cual es el órgano donde ocurre la gestación de los huevos fertilizados. Tanto sirenos como sirenas están equipados con un útero funcional algo más ancho que el de la especie humana para el desarrollo de huevos anamniotas.
 
-## Ovoviviparismo ovisacárido
+## Fecundación, Segemntación y Blastulación
+`Duración: 1 Semana`
 
-Los huevos de los Sirenis sapiens son una variante evolutiva anamniota con características particulares. Aunque carecen de membranas extraembrionarias especializadas como las de los amniotas terrestres, los embriones están conectados al exterior de la membrana por un tubo similar al tubo vitelino de otros animales. Este tubo absorbe nutrientes del líquido amniótico dentro del vientre del sireno o sirena, asegurando el desarrollo adecuado de los embriones antes del desove y su posterior eclosión.
+La fecundación ocurre internamente, donde el esperma del sireno se encuentra con el óvulo en el útero. Dado que las sirenas tienen una estrategia reproductiva K, se invierte mayor recurso en menos crías, provocando que no todos los huevos se fertilicen y dando lugar a cigotos mesolecíticos.
 
-La cáscara gelatinosa y serosa de los huevos bentónicos es secretada por una glándula nidamentaria, comparable a las velas presentes en otros animales marinos. Esta estructura protege y sostiene los huevos durante el desarrollo intrauterino y en las etapas iniciales del desarrollo larval, fuera del útero, posterior a la eclosión.
+El cigoto comienza a dividirse por mitosis. La segmentación es holoblástica desigual, lo que significa que las células se dividen completamente, pero de manera desigual debido a la presencia moderada de vitelo. Las células grandes (macrómeros) y pequeñas (micrómeros) se forman, con células más grandes en la región más rica en vitelo.
 
-Esta especie de sirenas son ovovivíparos, lo que implica que la fecundación ocurre internamente y los huevos se desarrollan dentro del cuerpo de la madre o padre, aunque con el caso particular de que los huevos no eclosionan dentro del útero, sino que se preoduce un desove días antes de que eclosionen. Los huevos son *mesolecitos* y *telolecitos* con segmentación *holoblástica desigual*.
+La segmentación continúa y el embrión se organiza en una estructura conocida como blástula, una esfera hueca de células compuesta por blastodermo en la capa externa y una cavidad llena de líquido llamada blastocele.
 
-- *Mesolecitos y telolecitos*: Esto se refiere a la distribución de los nutrientes dentro del huevo. Los mesolecitos tienen una distribución moderada de nutrientes, mientras que los telolecitos tienen nutrientes concentrados en un polo del huevo. Esta diferencia afecta cómo se desarrolla el embrión y cómo obtiene sus nutrientes durante el desarrollo.
-- *Segmentación holoblástica desigual*: En este tipo de segmentación, el huevo se divide en células más pequeñas durante el proceso de división celular. La segmentación desigual significa que estas divisiones no son uniformes, creando células de diferentes tamaños y funciones especializadas desde el principio del desarrollo.
+## Gastrulación y Neurulación
+`Duración: 2 Semanas`
 
-El desarrollo embrionario de los sirenotéridos ocurre de la siguiente manera:
+La blástula sufre invaginación en el área del blastoporo, formando el arquenterón, que se convertirá en el intestino primitivo. Este proceso establece tres capas germinales: el ectodermo, que forma la piel y el sistema nervioso; el mesodermo, que da origen a músculos y sistemas internos; y el endodermo, que forma el revestimiento interno del tracto digestivo. 
 
-1. *Fecundación y desarrollo inicial*: La fecundación ocurre internamente, dentro del cuerpo del sireno o sirena. Los huevos fertilizados comienzan a dividirse rápidamente por segmentación holoblástica desigual.
-2. *Desarrollo intrauterino*: Durante un período de tiempo variable, los huevos se desarrollan dentro del cuerpo del sireno o sirena, recibiendo nutrientes del líquido amniótico a través del tubo conectado a la membrana gelatinosa.
-3. *Expulsión y desarrollo externo*: Cuando el desarrollo intrauterino ha avanzado lo suficiente, los huevos son expulsados al mar. Aquí continúan su desarrollo hasta eclosionar en un estado larval parecido al de los anfibios.
-4. *Metamorfosis*: Después de la eclosión, las larvas experimentan una metamorfosis que les confiere rasgos más "humanos" pero manteniendo características que los hacen distintivos.
+La notocorda, una estructura mesodérmica, guía el desarrollo del tubo neural y la placa neural, que se pliega para formar el sistema nervioso central, y finalmente derivar en el tubo neural, que dará lugar al cerebro y la médula espinal.
+
+## Organogénesis inicial
+`Duración: 2 Semanas`
+
+En la cuarta y quinta semana, las tres capas germinales formadas durante la gastrulación se diferencian en los órganos y sistemas del cuerpo del sireno. El ectodermo desarrolla la piel, el sistema nervioso y las estructuras sensoriales; el mesodermo se convierte en músculos, huesos, sistema circulatorio y órganos reproductivos; y el endodermo se transforma en el revestimiento de los tractos digestivo y respiratorio, así como en las glándulas asociadas.
+
+Este proceso ocurre mientras el embrión permanece dentro del huevo, que ya ha sido expulsado al mar. Dentro del huevo, el embrión continúa su desarrollo hasta alcanzar una etapa larval, que es cuando eclosiona.
+
+## Metamorfosis del estado larval
+
+`Duración: Primeras 5 semanas`
+
+Durante las primeras cinco semanas post-eclosión, la larva de sireno depende de la oofagia para completar su desarrollo, consumiendo huevos no fertilizados depositados por la madre o el padre en el entorno. Este proceso proporciona los nutrientes necesarios para su crecimiento mientras continúa la morfogénesis, que refina las estructuras corporales a través de la diferenciación celular y de tejidos.
+
+Durante este período, el sireno desarrolla un ombligo debido a la acción de un gen pleiotrópico que influye en el desarrollo del abdomen. Esta característica, que no está asociada con un cordón umbilical como en los mamíferos, actúa como un marcador evolutivo. El ombligo en los sirenos no es un vestigio de una estructura ancestral, sino una adaptación evolutiva derivada de la expresión de un gen que afecta el desarrollo de los tejidos abdominales, sin función específica conocida en su desarrollo.
+
+`Duración: 20 semanas`
+
+En esta fase intermedia, el sireno comienza a sufrir cambios morfológicos más visibles. Las estructuras anatómicas se ajustan y desarrollan de manera más especializada, comenzando a adquirir características más definidas de la especie adulta. Las aletas, piel, y sistema nervioso se desarrollan plenamente, mientras que los órganos internos continúan su maduración.
+
+
+`Duración: 26 semanas`
+
+En la fase final del desarrollo larval, la metamorfosis completa se lleva a cabo. Durante estas 26 semanas restantes, la larva de sireno adquiere una apariencia cada vez más humana, adaptándose completamente a su entorno marino y desarrollando las capacidades sensoriales y motoras necesarias para su supervivencia.
+
+La diferenciación celular y la reorganización de los tejidos permiten que el sireno alcance su forma juvenil. Al final de este proceso, se habrá completado la metamorfosis y estárá preparado para comenzar su recimiento como neonato.
+
 
 ## Hibridaciones
 
 A nivel genético, las especies evolucionan para ser compatibles dentro de su propio grupo taxonómico. Los sirenis sapiens no son una excepción. Como criaturas marinas con características únicas y una historia evolutiva aislada, no compartirían el suficiente grado de compatibilidad genética con otras especies como los humanos para permitir la fecundación y desarrollo de un embrión viable.
 
-Sin embargo, existe un fenómeno particular en su especie. A pesar de la incompatibilidad genética con los humanos y otras especies terrestres, el cuerpo de los sirenos y sirenas está capacitado para engendrar diferentes tipos de perciformes dependiendo del ser con el que fueron fecundados. Esto significa que, aunque distan genéticamente, el proceso de gestación y desarrollo dentro del cuerpo del sireno o sirena puede adaptarse para albergar y nutrir embriones de especies perciformes dependiendo de la especie que los fecundó.
+Sin embargo, existe un fenómeno particular en su especie. A pesar de la incompatibilidad genética con los humanos y otras especies terrestres, el cuerpo de los sirenos y sirenas está capacitado para engendrar diferentes tipos de perciformes dependiendo del ser con el que fueron fecundados. Esto significa que, aunque distan genéticamente, el proceso de gestación y desarrollo dentro del cuerpo del sireno puede adaptarse para albergar y nutrir embriones de especies perciformes dependiendo de la especie que los fecundó.

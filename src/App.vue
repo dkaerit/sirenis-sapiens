@@ -316,7 +316,31 @@ h1 {
   }
 }
 
-.shape-outside {
-  
+code {
+  font-style: italic;
+  font-family: inherit;
+  background: #ededed;
+  padding: 2px 25% 2px 0px;
+  display: block;
+  width: fit-content;
+  clip-path: polygon(0 0, 100% 0, calc(100% - 40px) 100%, 0 100%);
+
+  /*&::after {
+    content: ""; // Contenido del pseudo-elemento 
+    position: absolute; // Posiciona relativo al contenedor 
+    left: 0; // Comienza desde la izquierda 
+    right: 0; // Hasta la derecha 
+    bottom: -1px; // Coloca el underline 3px por debajo del texto 
+    height: 1px; // Grosor del underline 
+    background: linear-gradient(
+      to right,
+      transparent 0%,
+      rgba(0, 0, 0, 0.486) 2%,
+      rgba(0, 0, 0, 0.486) 70%,
+      transparent 100%
+    );
+    //background-image: linear-gradient(to right, #ffcc00, #ff3300); // Gradiente de color 
+    //background: #000;
+  }*/
 }
 </style>

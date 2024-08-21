@@ -12,7 +12,7 @@ const handleScroll = (event) => {
 
 <template>
   <div
-    class="m-0 p-0 border-0 text-base font-inherit align-baseline float-right 
+    id="wrapper" class="lg:min-w-[1200px] m-0 p-0 border-0 text-base font-inherit align-baseline float-right 
     border-l h-screen bg-white border-[#161616] 
     max-w-[1150px] overflow-hidden"
     @wheel="handleScroll" 
