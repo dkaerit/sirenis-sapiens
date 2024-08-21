@@ -13,22 +13,32 @@ import { Button } from "@/components/ui/button";
 // Crear una referencia para almacenar si el usuario es mayor de edad
 const isAdult = ref(false);
 const isDialogOpen = ref(false);
-const images = ref<Array<{ src: string; author: string }>>([]);
+const images = ref<Array<Array<{ src: string; author: string }>>>([[]]);
 
 async function loadImages() {
   images.value = [
-    { "src": (await import('../assets/imgs/gallery/egg-laying-1.png')).default, "author": "@humanoids_091" },
-    { "src": "https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-10.jpg", "author": "Autor 1" },
-    { "src": "https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-9.jpg", "author": "Autor 3" },
-    { "src": "https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-8.jpg", "author": "Autor 4" },
-    { "src": (await import('../assets/imgs/gallery/viñeta-1.jpg')).default, "author": "@humanoids_091" },
-    { "src": "https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-6.jpg", "author": "Autor 6" },
-    { "src": "https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-5.jpg", "author": "Autor 7" },
-    { "src": "https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-4.jpg", "author": "Autor 8" },
-    { "src": "https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-3.jpg", "author": "Autor 9" },
-    { "src": "https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-2.jpg", "author": "Autor 10" },
-    { "src": "https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-1.jpg", "author": "Autor 11" },
-    { "src": "https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image.jpg", "author": "Autor 12" }
+    [
+      { "src": (await import('../assets/imgs/gallery/fingering-1.jpg')).default, "author": "@humanoids_091" },
+      { "src": (await import('../assets/imgs/gallery/sketch-9.png')).default, "author": "⚠ unreachable" }, 
+      { "src": (await import('../assets/imgs/gallery/sketch-1.png')).default, "author": "@humanoids_091" },
+      { "src": (await import('../assets/imgs/gallery/concept-1.png')).default, "author": "kuma-tori & allmyfavaus (tumblr)" }, // rei
+      { "src": (await import('../assets/imgs/gallery/sketch-5.png')).default, "author": "@humanoids_091" },
+      { "src": (await import('../assets/imgs/gallery/sketch-3.png')).default, "author": "@humanoids_091" },
+    ],
+    [
+      { "src": (await import('../assets/imgs/gallery/viñeta-1.jpg')).default, "author": "@humanoids_091" },
+      { "src": (await import('../assets/imgs/gallery/sketch-2.png')).default, "author": "@humanoids_091" },
+      { "src": (await import('../assets/imgs/gallery/sketch-7.png')).default, "author": "@humanoids_091" },
+      { "src": (await import('../assets/imgs/gallery/sketch-6.png')).default, "author": "@humanoids_091" },
+      { "src": (await import('../assets/imgs/gallery/scene.jpg')).default, "author": "???" },
+    ],
+    [
+      { "src": (await import('../assets/imgs/gallery/egg-laying-1.png')).default, "author": "sketch: @humanoids_091,  final: @anidiotfish" },
+      { "src": (await import('../assets/imgs/gallery/lamia-merman-egg-laying-2.png')).default, "author": "@humanoids_091" },
+      { "src": (await import('../assets/imgs/gallery/viñeta-2.jpg')).default, "author": "@humanoids_091" },
+      { "src": (await import('../assets/imgs/gallery/sketch-4.png')).default, "author": "@humanoids_091" },
+      { "src": (await import('../assets/imgs/gallery/sketch-8.png')).default, "author": "@humanoids_091" },
+    ],
   ];
 }
 
@@ -60,13 +70,13 @@ function handleNoClick() {
   closeDialog();
 }
 
-function chunkArray<T>(array: T[], size: number): T[][] {
+/*function chunkArray<T>(array: T[], size: number): T[][] {
   const result: T[][] = [];
   for (let i = 0; i < array.length; i += size) {
     result.push(array.slice(i, i + size));
   }
   return result;
-}
+}*/
 
 onMounted(async () => {
   await loadImages();
@@ -92,11 +102,12 @@ onMounted(async () => {
 <template>
   <h1>Anexos: Galería .</h1>
   <div class="md:columns-1 columns-1">
-    <GalleryDoc class="first" />
+    <GalleryDoc />
+    <br/>
 
 
-    <div class="grid grid-cols-2 md:grid-cols-3 gap-8 masonry-gallery">
-         <div v-for="(group, index) in chunkArray(images, 4)" :key="index" class="grid gap-4">
+    <div class="grid grid-cols-2 md:grid-cols-3 gap-8 masonry-gallery items-start">
+         <div v-for="(group, index) in images" :key="index" class="grid gap-4">
             <div v-for="(image, imgIndex) in group" :key="imgIndex" class="image-item">
                <div class="gallery-image overflow-hidden"><img :class="['h-auto max-w-full blurred', { 'rounded-lg': false }]" :src="image.src" alt="Gallery Image"></div>
                <center><span class="relative z-10 bg-white px-[10px] text-[0.85em] bottom-[2px]">{{ image.author }}</span></center>

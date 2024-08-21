@@ -1,2 +1,2 @@
-<!--<img class="blurred" src="../assets/imgs/gallery/egg-laying-1.png"/>-->
+Quiero aclarar que las obras expuestas aquí no son de mi autoría original. A continuación, se especificará el nombre de los autores originales de cada pieza, al pie de cada iamgen. En algunos casos, he tomado sketches o linearts de otros artistas y he trabajado en su finalización. Estos trabajos modificados también están debidamente atribuidos a los creadores originales. Agradezco a todos los artistas por su inspiración y talento.
 
