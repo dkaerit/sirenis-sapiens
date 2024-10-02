@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { ref, onMounted, nextTick } from "vue";
+import { ref, onMounted, nextTick, watch } from "vue";
 // @ts-ignore
 import GalleryDoc from "../docs/gallery.md";
 import {
@@ -14,6 +14,7 @@ import { Button } from "@/components/ui/button";
 const isAdult = ref(false);
 const isDialogOpen = ref(false);
 const images = ref<Array<Array<{ src: string; author: string; url?: string }>>>([[]]);
+const imagesLoaded = ref(false); // Controla si las imágenes se han cargado
 
 async function loadImages() {
   images.value = [
@@ -74,17 +75,15 @@ function handleNoClick() {
 }
 
 onMounted(async () => {
-  await loadImages();
-
   // Leer el estado de 'isAdult' desde localStorage
   const storedIsAdult = localStorage.getItem('isAdult');
-  if (storedIsAdult === 'true') {
-    isAdult.value = true;
-    removeBlurredClass(); // Asegúrate de eliminar el desenfoque si es adulto
-  }
+  if (storedIsAdult === 'true') isAdult.value = true;
 
-  await nextTick(); // Esperar a que el DOM se actualic
-  if(!isAdult.value) openDialog();
+  loadImages();
+  await nextTick(); // Esperar a que el DOM se actualice
+
+  if(isAdult.value) removeBlurredClass();
+  else openDialog();
 
   // Seleccionar todas las imágenes con la clase "blurred"
   const blurredImages = document.querySelectorAll("img.blurred");
@@ -94,6 +93,13 @@ onMounted(async () => {
     img.addEventListener("click", openDialog);
   });
 });
+
+watch([imagesLoaded, isAdult], ([loaded, adult]) => {
+  if (loaded && adult) {
+    removeBlurredClass();
+  }
+});
+
 </script>
 <template>
   <h1>Anexos: Galería .</h1>
