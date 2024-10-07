@@ -15,5 +15,9 @@ export default createRouter({
          path: '/gallery',
          component: () => import('../views/Gallery.vue'),
        },
+       {
+        path: '/mitos-y-leyendas',
+        component: () => import('../views/Mitos.vue'),
+      },
    ]
 });

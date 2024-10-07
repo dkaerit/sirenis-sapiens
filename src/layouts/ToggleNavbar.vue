@@ -20,7 +20,9 @@ const handleLinkClick = (routeTo: string) => {
 const menuItems = ref([
   { id: 1, label: "Inicio", route: "/" },
   { id: 2, label: "Sistema reproductor", route: "/reproductive-system" },
+  { id: 3, label: "Mitos y leyendas", route: "/mitos-y-leyendas" },
   { id: 3, label: "Galería", route: "/gallery" },
+
 ]);
 
 </script>

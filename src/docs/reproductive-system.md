@@ -38,7 +38,7 @@ El cuello uterino conecta la vagina con el útero, el cual es el órgano donde o
 ## Fecundación, Segemntación y Blastulación
 `Duración: 1 Semana`
 
-La fecundación ocurre internamente, donde el esperma del sireno se encuentra con el óvulo en el útero. Dado que las sirenas tienen una estrategia reproductiva K, se invierte mayor recurso en menos crías, provocando que no todos los huevos se fertilicen y dando lugar a cigotos mesolecíticos.
+La fecundación ocurre internamente, donde el esperma del sireno se encuentra con el óvulo en el útero. Dado que las sirenas/sirenos tienen una estrategia reproductiva K, se invierte mayor recurso en menos crías, provocando que no todos los huevos se fertilicen y dando lugar a cigotos mesolecíticos.
 
 El cigoto comienza a dividirse por mitosis. La segmentación es holoblástica desigual, lo que significa que las células se dividen completamente, pero de manera desigual debido a la presencia moderada de vitelo. Las células grandes (macrómeros) y pequeñas (micrómeros) se forman, con células más grandes en la región más rica en vitelo.
 
