@@ -1,6 +1,4 @@
 <script setup lang="ts">
-import Taxon from "../components/Taxon.vue";
-
 // @ts-ignore
 import Main from "../docs/main.md";
 // @ts-ignore
