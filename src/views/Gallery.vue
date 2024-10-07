@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { ref, onMounted, nextTick, watch } from "vue";
+import { ref, onMounted, nextTick } from "vue";
 // @ts-ignore
 import GalleryDoc from "../docs/gallery.md";
 import {
@@ -10,38 +10,38 @@ import {
 } from "@/components/ui/dialog";
 import { Button } from "@/components/ui/button";
 
+
 // Crear una referencia para almacenar si el usuario es mayor de edad
 const isAdult = ref(false);
 const isDialogOpen = ref(false);
 const images = ref<Array<Array<{ src: string; author: string; url?: string }>>>([[]]);
-const imagesLoaded = ref(false); // Controla si las imágenes se han cargado
 
 async function loadImages() {
   images.value = [
     [
-      { "src": "https://i.imgur.com/BwBwjmZ.jpeg", "author": "@humanoids_091" },
-      { "src": "https://i.imgur.com/qHtx0IU.png", "author": "⚠ unreachable" }, 
+      { "src": (await import('../assets/imgs/gallery/fingering-1.jpg')).default, "author": "@humanoids_091" },
+      { "src": (await import('../assets/imgs/gallery/sketch-9.png')).default, "author": "⚠ unreachable" }, 
+      { "src": (await import('../assets/imgs/gallery/sketch-1.png')).default, "author": "@humanoids_091" },
       { "src": "https://i.imgur.com/NO3COxL.png", "author": "kuma-tori & allmyfavaus (tumblr)" }, // rei
-      { "src": "https://i.imgur.com/QFEVWep.png", "author": "@humanoids_091" },
-      { "src": "https://i.imgur.com/Lh15ktN.png", "author": "@humanoids_091" },
-      { "src": "https://i.imgur.com/29qMASW.png", "author": "@humanoids_091" },
+      //{ "src": (await import('../assets/imgs/gallery/concept-1.png')).default, "author": "kuma-tori & allmyfavaus (tumblr)" }, // rei
+      { "src": (await import('../assets/imgs/gallery/sketch-5.png')).default, "author": "@humanoids_091" },
+      { "src": (await import('../assets/imgs/gallery/sketch-3.png')).default, "author": "@humanoids_091" },
     ],
     [
-      { "src": "https://i.imgur.com/OibRMz4.jpeg", "author": "@humanoids_091" },
-      { "src": "https://i.imgur.com/hsXAvM7.png", "author": "@humanoids_091" },
-      { "src": "https://i.imgur.com/VCeMET8.png", "author": "@humanoids_091" },
-      { "src": "https://i.imgur.com/x1RAvpX.png", "author": "@humanoids_091" },
+      { "src": (await import('../assets/imgs/gallery/viñeta-1.jpg')).default, "author": "@humanoids_091" },
+      { "src": (await import('../assets/imgs/gallery/sketch-2.png')).default, "author": "@humanoids_091" },
+      { "src": (await import('../assets/imgs/gallery/sketch-7.png')).default, "author": "@humanoids_091" },
+      { "src": (await import('../assets/imgs/gallery/sketch-6.png')).default, "author": "@humanoids_091" },
+      //{ "src": (await import('../assets/imgs/gallery/scene.jpg')).default, "author": "glochan10 (tumblr)", "url": "https://glochan10.tumblr.com/post/97110664607/quick-doodle-for-my-mermaid-au-wait-im" },
       { "src": "https://i.imgur.com/MJs0hpg.jpeg", "author": "glochan10 (tumblr)", "url": "https://glochan10.tumblr.com/post/97110664607/quick-doodle-for-my-mermaid-au-wait-im" },
     ],
     [
-      { "src": "https://i.imgur.com/6yd6miF.png", "author": "sketch: @humanoids_091,  final: @anidiotfish" },
+      { "src": (await import('../assets/imgs/gallery/egg-laying-1.png')).default, "author": "sketch: @humanoids_091,  final: @anidiotfish" },
       { "src": "https://i.imgur.com/4H589sY.png", "author": "堀 ボリ (pixiv)" },
-      { "src": "https://i.imgur.com/ydC3M4e.png", "author": "@humanoids_091" },
-      { "src": "https://i.imgur.com/9atO4oA.jpeg", "author": "@humanoids_091" },
-      { "src": "https://i.imgur.com/NV8O08C.png", "author": "@humanoids_091" },
-      { "src": "https://i.imgur.com/6cQV5iO.png", "author": "@humanoids_091" },
-      
-      
+      { "src": (await import('../assets/imgs/gallery/lamia-merman-egg-laying-2.png')).default, "author": "@humanoids_091" },
+      { "src": (await import('../assets/imgs/gallery/viñeta-2.jpg')).default, "author": "@humanoids_091" },
+      { "src": (await import('../assets/imgs/gallery/sketch-4.png')).default, "author": "@humanoids_091" },
+      { "src": (await import('../assets/imgs/gallery/sketch-8.png')).default, "author": "@humanoids_091" },
     ],
   ];
 }
@@ -74,16 +74,22 @@ function handleNoClick() {
   closeDialog();
 }
 
+import useLoading from "@/composables/useLoading"; 
+const { startLoading, stopLoading } = useLoading();
+
 onMounted(async () => {
+  startLoading(); // Comienza a cargar
+  await loadImages();
+
   // Leer el estado de 'isAdult' desde localStorage
   const storedIsAdult = localStorage.getItem('isAdult');
-  if (storedIsAdult === 'true') isAdult.value = true;
+  if (storedIsAdult === 'true') {
+    isAdult.value = true;
+    removeBlurredClass(); // Asegúrate de eliminar el desenfoque si es adulto
+  }
 
-  loadImages();
-  await nextTick(); // Esperar a que el DOM se actualice
-
-  if(isAdult.value) removeBlurredClass();
-  else openDialog();
+  await nextTick(); // Esperar a que el DOM se actualic
+  if(!isAdult.value) openDialog();
 
   // Seleccionar todas las imágenes con la clase "blurred"
   const blurredImages = document.querySelectorAll("img.blurred");
@@ -92,14 +98,9 @@ onMounted(async () => {
   blurredImages.forEach((img) => {
     img.addEventListener("click", openDialog);
   });
-});
 
-watch([imagesLoaded, isAdult], ([loaded, adult]) => {
-  if (loaded && adult) {
-    removeBlurredClass();
-  }
+  stopLoading(); // Detiene la carga
 });
-
 </script>
 <template>
   <h1>Anexos: Galería .</h1>
@@ -111,9 +112,7 @@ watch([imagesLoaded, isAdult], ([loaded, adult]) => {
     <div class="grid grid-cols-2 md:grid-cols-3 gap-8 masonry-gallery items-start">
          <div v-for="(group, index) in images" :key="index" class="grid gap-4">
             <div v-for="(image, imgIndex) in group" :key="imgIndex" class="image-item">
-               <div class="gallery-image overflow-hidden">
-                  <img :class="['h-auto max-w-full blurred', { 'rounded-lg': false }]" :src="image.src" alt="Gallery Image">
-               </div>
+               <div class="gallery-image overflow-hidden"><img :class="['h-auto max-w-full blurred', { 'rounded-lg': false }]" :src="image.src" alt="Gallery Image"></div>
                <center>
 
                 <span v-if="image.url" class="relative z-10 bg-white px-[10px] text-[0.85em] bottom-[2px]">

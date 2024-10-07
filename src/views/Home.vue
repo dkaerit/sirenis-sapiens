@@ -7,6 +7,15 @@ import Main from "../docs/main.md";
 import Evolution from "../docs/evolution.md";
 
 import taxonTree from "../components/taxonTree.yml";
+
+/* loading bar */
+import useLoading from "@/composables/useLoading"; 
+import { onMounted } from "vue";
+const { startLoading, stopLoading } = useLoading();
+onMounted(async () => {
+  startLoading(); // Comienza a cargar
+  stopLoading(); // Detiene la carga
+});
 </script>
 
 <template>
